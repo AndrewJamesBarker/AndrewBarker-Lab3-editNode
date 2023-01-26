@@ -1,8 +1,10 @@
 extends layout 
 
 
-block main-content 
+block append scripts 
   //You can overwrite the main-content block by writing block content
   //in the template file which is extending.
+   
+  script(src="/index.js")
   h1.page-title Hello! This is a test page.
   p Some random content in a paragraph.

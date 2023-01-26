@@ -82,9 +82,10 @@ app.post("/admin/menu/edit/submit", async (request, response) => {
     path: request.body.path,
     name: request.body.name
   };
-
+// id for use as filter
   const editIdFilter = { _id: new ObjectId(id) };
   console.log();
+  //running edit link
   await editLink(editIdFilter, link);
   // 
   response.redirect("/admin/menu");
